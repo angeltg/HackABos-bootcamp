@@ -11,21 +11,19 @@ import { HeroService } from '../hero.service';
 export class HeroesComponent implements OnInit {
 
  heroes = Hero[0];
- selectedHero: Hero;
+ 
  
  constructor( private heroService: HeroService) {
     
+   }
+   ngOnInit() {
+    this.getHeroes();
    }
   getHeroes (): void{
     this.heroService.getHeroes()
     .subscribe(heroes => this.heroes = heroes);
     // this.heroes = this.heroService.getHeroes();
   }
-  ngOnInit() {
-   this.getHeroes();
-  }
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
+  
 
 }
