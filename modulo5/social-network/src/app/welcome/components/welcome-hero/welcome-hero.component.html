@@ -1,3 +1,9 @@
-<p>
-  welcome-hero works!
-</p>
+<ul>
+<!-- recorre el array definida en el ts -->
+  <li *ngFor="let row of rows">
+     
+    <h1>
+      <fa-icon [icon]="row.icon"></fa-icon> {{ row.message}}
+    </h1>
+  </li>
+</ul>

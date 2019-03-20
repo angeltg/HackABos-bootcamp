@@ -1,0 +1,19 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <div>
+    <input type="text" placeholder="Email" changeColor formControlName="email">
+    <div *ngIf="loginForm.get('email').invalid && loginForm.get('email').dirty">
+      <span> This field is required </span>
+    </div>
+  </div>
+  <div>
+    <!-- formControlName son directivas que ofrecen mucha información -->
+    <input type="text" placeholder="Password" formControlName="password"> 
+    <div *ngIf="loginForm.get('password').invalid  && loginForm.get('password').dirty">
+        <span> This field is required </span>
+      </div>
+  </div>
+  <button>Login</button>
+</form> 
+
+<!-- Transforma los campos en un json -->
+<p>{{ loginForm.value | json}}</p>
