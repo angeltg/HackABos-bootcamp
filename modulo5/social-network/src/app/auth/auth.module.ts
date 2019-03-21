@@ -7,6 +7,8 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './containers/login/login.component';
 import { RegisterComponent } from './containers/register/register.component';
 import { AuthDirective } from '../shared/directives/auth.directive';
+import { SharedModule } from '../shared/shared.module';
+
 
 
 @NgModule({
@@ -14,7 +16,8 @@ import { AuthDirective } from '../shared/directives/auth.directive';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   exports: [LoginComponent, RegisterComponent]
 })

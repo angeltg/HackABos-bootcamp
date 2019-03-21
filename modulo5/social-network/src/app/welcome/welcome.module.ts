@@ -10,6 +10,7 @@ import { WelcomeHeroComponent } from './components/welcome-hero/welcome-hero.com
 import { WelcomeFormComponent } from './components/welcome-form/welcome-form.component';
 import { AuthModule} from '../auth/auth.module';
 
+
 @NgModule({
   declarations: [WelcomeComponent, WelcomeHeroComponent, WelcomeFormComponent],
   imports: [

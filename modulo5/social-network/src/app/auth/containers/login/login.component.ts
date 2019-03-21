@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 
+import { MailValidator } from '../../../auth/validators/email.validator';
+
 
 @Component({
   selector: 'sn-login',
@@ -12,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   loginForm = this.fb.group({
     // Lo datos que te pasan, los parámetros de validación, y la llamada asíncrona para comprobar su existencia
-    email: ['', [Validators.required]],
+    email: ['', [Validators.required,MailValidator]],
     password: ['', [Validators.required]]
   });
 
