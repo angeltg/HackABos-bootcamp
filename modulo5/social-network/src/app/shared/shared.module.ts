@@ -10,6 +10,7 @@ import { SiteLayoutFooterComponent } from './components/site-layout-footer/site-
 
 import { FormComponent } from './components/forms/form.component';
 import { FormControlComponent } from './components/forms/form-control.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormControlComponent } from './components/forms/form-control.component'
     SiteLayoutHeaderComponent,
     SiteLayoutFooterComponent,
     FormComponent,
-    FormControlComponent
+    FormControlComponent,
+    PageNotFoundComponent
   ],
   imports: [CommonModule, RouterModule, FontAwesomeModule],
   exports: [

@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
     password: ['', [Validators.required]],
     fullName: ['', [Validators.required]],
     confirmPassword: ['', [Validators.required]]
-  }, { updateOn: 'blur'}); // ESto hace referencia a todo el grupo de campos. Esto último es para que solo valida el campo una vez que salgo del mismo
+  }, { updateOn: 'blur'}); // Esto hace referencia a todo el grupo de campos. Esto último es para que solo valida el campo una vez que salgo del mismo
 
   constructor(private fb: FormBuilder, private authService: AuthService) { }
 
@@ -27,6 +27,7 @@ export class RegisterComponent implements OnInit {
   }
   register() {
     if ( this.registerForm.valid){
+      
       //TODO llamada de red para logearse
       this.authService.register(this.registerForm.value).subscribe(data => console.log(data), error => console.log(error));
        // console.log(this.loginForm.value);
