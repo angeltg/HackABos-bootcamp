@@ -26,3 +26,24 @@ export interface Comment {
   creatAt: number;
   id: string;
 }
+
+
+export interface FriendCollection{
+  //Aquí vamos a pasar los datos a un objeto para facilitar el manejo de los post
+  [key: string]: Friend;
+}
+export interface Friend {
+  uuid: string;
+  fullName: string;
+  friends: any[];
+  avatarUrl: string;
+  preferences: Preferences;
+}
+
+export interface Preferences {
+  isPublicProfile: boolean;
+  linkedIn: string;
+  twitter: string;
+  github: string;
+  description: string;
+}

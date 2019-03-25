@@ -1,7 +1,7 @@
 <h1>Posts</h1>
 
 <div *ngFor="let post of post">
-  <h1>{{ post.conten }}</h1>
+  <h1> {{ post.conten }}</h1>
   </div>
 <sn-publisher></sn-publisher>
 <ng-container *ngFor="let item of (posts$ | async)">

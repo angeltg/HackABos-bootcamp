@@ -1,3 +1,9 @@
-<p>
-  dashboard-aside works!
-</p>
+
+<h1>Buscando amigos con "Yag"</h1>
+<!-- 
+<div *ngFor="let friend of friend">
+  <h1><a href="https://josesocialpoc.azurewebsites.net/api/user/friendrequests?friend={{ friend.uuid }}">Pedir amistad </a> {{ friend.fullName }}</h1>
+  </div> -->
+<ng-container *ngFor="let item of (friends$ | async)">
+  <sn-friend-request [friend]="item" ></sn-friend-request>
+</ng-container>

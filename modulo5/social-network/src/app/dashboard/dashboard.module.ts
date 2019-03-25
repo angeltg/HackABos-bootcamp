@@ -17,14 +17,18 @@ import { PostContentComponent } from './components/post-content/post-content.com
 import { LikeComponent } from './components/like/like.component';
 import { PostCommentCounterComponent } from './components/post-comment-counter/post-comment-counter.component';
 import { PostCommentComponent } from './components/post-comment/post-comment.component';
+import { FriendRequestComponent } from './components/friends/friend-request/friend-request.component';
+import { FriendState } from './store/friend.state';
 
 @NgModule({
-  declarations: [DashboardComponent, DashboardHeaderComponent, DashboardNavComponent, DashboardFooterComponent, DashboardAsideComponent, WallComponent, PostComponent, PublisherComponent, PostContentComponent, LikeComponent, PostCommentCounterComponent, PostCommentComponent],
+  declarations: [DashboardComponent, DashboardHeaderComponent, DashboardNavComponent, DashboardFooterComponent, DashboardAsideComponent, WallComponent, PostComponent, PublisherComponent, PostContentComponent, LikeComponent, PostCommentCounterComponent, PostCommentComponent, FriendRequestComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     FontAwesomeModule,
-    NgxsModule.forFeature([PostState])
+    NgxsModule.forFeature([PostState]),
+    NgxsModule.forFeature([FriendState])
+
   ]
 })
 export class DashboardModule { }

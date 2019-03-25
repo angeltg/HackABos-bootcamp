@@ -1,0 +1,10 @@
+@import 'colors.scss';
+@import 'breakpoints.scss';
+
+:host{
+
+a{
+  color:$dark;
+}
+
+}
