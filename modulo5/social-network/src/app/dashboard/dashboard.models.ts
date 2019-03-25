@@ -47,3 +47,25 @@ export interface Preferences {
   github: string;
   description: string;
 }
+
+export interface FriendPettionCollection{
+  //Aquí vamos a pasar los datos a un objeto para facilitar el manejo de los amigos
+  [key: string]: FriendPetition;
+}
+export interface FriendPetition {
+  uuid: string;
+  avatarUrl: string;
+  fullName: string;
+  request: Request;
+}
+
+export interface Request {
+  _id: string;
+  uuid: string;
+  confirmed: boolean;
+  createdAt: Date;
+  confirmedAt: Date;
+  rejectedAt: Date;
+}
+
+

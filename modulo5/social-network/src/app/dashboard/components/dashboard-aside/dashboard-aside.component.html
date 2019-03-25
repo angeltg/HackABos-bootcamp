@@ -1,9 +1,15 @@
 
-<h1>Buscando amigos con "Yag"</h1>
+<!-- <h1>Buscando amigos con "Yag"</h1> -->
 <!-- 
 <div *ngFor="let friend of friend">
   <h1><a href="https://josesocialpoc.azurewebsites.net/api/user/friendrequests?friend={{ friend.uuid }}">Pedir amistad </a> {{ friend.fullName }}</h1>
   </div> -->
-<ng-container *ngFor="let item of (friends$ | async)">
+<!-- <ng-container *ngFor="let item of (friends$ | async)">
   <sn-friend-request [friend]="item" ></sn-friend-request>
+</ng-container> -->
+
+<h1>Peticiones de amistad</h1>
+
+<ng-container *ngFor="let item of (friendsPetition$ | async )">
+<sn-friend-petitions [friendPetitions]="item"></sn-friend-petitions>
 </ng-container>

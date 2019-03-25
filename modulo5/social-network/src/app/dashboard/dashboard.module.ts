@@ -19,15 +19,18 @@ import { PostCommentCounterComponent } from './components/post-comment-counter/p
 import { PostCommentComponent } from './components/post-comment/post-comment.component';
 import { FriendRequestComponent } from './components/friends/friend-request/friend-request.component';
 import { FriendState } from './store/friend.state';
+import { FriendPetitionsComponent } from './components/friends/friend-petitions/friend-petitions.component';
+import { FriendPettionState } from './store/friend-petition.state';
 
 @NgModule({
-  declarations: [DashboardComponent, DashboardHeaderComponent, DashboardNavComponent, DashboardFooterComponent, DashboardAsideComponent, WallComponent, PostComponent, PublisherComponent, PostContentComponent, LikeComponent, PostCommentCounterComponent, PostCommentComponent, FriendRequestComponent],
+  declarations: [DashboardComponent, DashboardHeaderComponent, DashboardNavComponent, DashboardFooterComponent, DashboardAsideComponent, WallComponent, PostComponent, PublisherComponent, PostContentComponent, LikeComponent, PostCommentCounterComponent, PostCommentComponent, FriendRequestComponent, FriendPetitionsComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     FontAwesomeModule,
     NgxsModule.forFeature([PostState]),
-    NgxsModule.forFeature([FriendState])
+    NgxsModule.forFeature([FriendState]),
+    NgxsModule.forFeature([FriendPettionState])
 
   ]
 })
