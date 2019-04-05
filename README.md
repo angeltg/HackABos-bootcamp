@@ -1,2 +1,2 @@
 # HackABos-bootcamp
-Todos los ejercicios del bootcamp de Hack a bos
+Parte de los ejercicios del bootcamp de Javascript de Hack a bos
